@@ -77,5 +77,48 @@ namespace MVC9pmTigersBatch.Controllers
             return View();
         }
 
+        public ActionResult SendinfoByModel() {
+
+            EmployeeModel obj = new Models.EmployeeModel();
+            obj.EmpId = 1;
+            obj.EmpName = "Akshay";
+            obj.EmpSalary = 21000;
+
+            //object model=obj;
+            return View(obj);
+
+        }
+
+        public ActionResult SendMultipleinfoByModel()
+        {
+
+            List<EmployeeModel> listObj = new List<EmployeeModel>();
+
+            EmployeeModel obj = new Models.EmployeeModel();
+            obj.EmpId = 1;
+            obj.EmpName = "Akshay";
+            obj.EmpSalary = 21000;
+
+
+            EmployeeModel obj1 = new Models.EmployeeModel();
+            obj1.EmpId = 2;
+            obj1.EmpName = "Vithal";
+            obj1.EmpSalary = 31000;
+
+            EmployeeModel obj2 = new Models.EmployeeModel();
+            obj2.EmpId = 3;
+            obj2.EmpName = "Chaitanya";
+            obj2.EmpSalary = 61000;
+
+            listObj.Add(obj);
+            listObj.Add(obj1);
+            listObj.Add(obj2);
+
+
+            //object model=obj;
+            return View(listObj);
+
+        }
+
     }
 }

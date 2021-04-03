@@ -159,6 +159,8 @@
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\New\SendData.cshtml" />
     <Content Include="Views\New\SendMultipleEmployeeData.cshtml" />
+    <Content Include="Views\New\SendinfoByModel.cshtml" />
+    <Content Include="Views\New\SendMultipleinfoByModel.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
