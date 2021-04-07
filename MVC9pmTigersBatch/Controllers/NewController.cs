@@ -120,5 +120,135 @@ namespace MVC9pmTigersBatch.Controllers
 
         }
 
+        public ViewResult SendMultipleinfoByModel2()
+        {
+
+            List<EmployeeModel> listObj = new List<EmployeeModel>();
+            List<DepartmentModel> listdeptObj = new List<DepartmentModel>();
+
+            EmployeeModel obj = new Models.EmployeeModel();
+            obj.EmpId = 1;
+            obj.EmpName = "Akshay";
+            obj.EmpSalary = 21000;
+
+
+            EmployeeModel obj1 = new Models.EmployeeModel();
+            obj1.EmpId = 2;
+            obj1.EmpName = "Vithal";
+            obj1.EmpSalary = 31000;
+
+            EmployeeModel obj2 = new Models.EmployeeModel();
+            obj2.EmpId = 3;
+            obj2.EmpName = "Chaitanya";
+            obj2.EmpSalary = 61000;
+
+            listObj.Add(obj);
+            listObj.Add(obj1);
+            listObj.Add(obj2);
+
+
+            DepartmentModel dept = new Models.DepartmentModel();
+            dept.DeptId = 1;
+            dept.DeptName = "IT";
+
+            DepartmentModel dept1 = new Models.DepartmentModel();
+            dept1.DeptId = 2;
+            dept1.DeptName = "Network";
+
+            listdeptObj.Add(dept);
+            listdeptObj.Add(dept1);
+
+            EmpDept eobj = new Models.EmpDept();
+            eobj.emp = listObj;
+            eobj.dept = listdeptObj;
+
+            //object model=obj;
+            return View(eobj);
+
+        }
+
+        public RedirectToRouteResult GetMeToGarden()
+        {
+            List<EmployeeModel> listObj = new List<EmployeeModel>();
+
+            EmployeeModel obj = new Models.EmployeeModel();
+            obj.EmpId = 1;
+            obj.EmpName = "Akshay";
+            obj.EmpSalary = 21000;
+
+
+            EmployeeModel obj1 = new Models.EmployeeModel();
+            obj1.EmpId = 2;
+            obj1.EmpName = "Vithal";
+            obj1.EmpSalary = 31000;
+
+            EmployeeModel obj2 = new Models.EmployeeModel();
+            obj2.EmpId = 3;
+            obj2.EmpName = "VT";
+            obj2.EmpSalary = 61000;
+
+            listObj.Add(obj);
+            listObj.Add(obj1);
+            listObj.Add(obj2);
+
+            //return RedirectToAction("Index","Default",new {id=1211 });
+            return RedirectToAction("Index", "Default", listObj);
+        }
+
+
+        public RedirectResult getmeHome()
+        {
+            return Redirect("http://www.google.com");
+        }
+
+        public RedirectResult getmeHome2()
+        {
+            return Redirect("~/new/SendMultipleinfoByModel2");
+        }
+
+        public RedirectToRouteResult getmeHome3()
+        {
+            return RedirectToRoute("Default1");
+        }
+        public JsonResult getmeHome4()
+        {
+            List<EmployeeModel> listObj = new List<EmployeeModel>();
+
+            EmployeeModel obj = new Models.EmployeeModel();
+            obj.EmpId = 1;
+            obj.EmpName = "Akshay";
+            obj.EmpSalary = 21000;
+
+
+            EmployeeModel obj1 = new Models.EmployeeModel();
+            obj1.EmpId = 2;
+            obj1.EmpName = "Vithal";
+            obj1.EmpSalary = 31000;
+
+            EmployeeModel obj2 = new Models.EmployeeModel();
+            obj2.EmpId = 3;
+            obj2.EmpName = "VT";
+            obj2.EmpSalary = 61000;
+
+            listObj.Add(obj);
+            listObj.Add(obj1);
+            listObj.Add(obj2);
+
+
+            return Json(listObj,JsonRequestBehavior.AllowGet);
+        }
+
+        public FileResult getmeHome5()
+        {
+            return File("~/Web.config","text/plain");
+        }
+        public FileResult getmeHome6()
+        {
+            return File("~/ActionResult.pdf", "application/pdf");
+        }
+        public FileResult getmeHome7()
+        {
+            return File("~/ActionResult.pdf", "application/pdf", "ActionResult.pdf");
+        }
     }
 }

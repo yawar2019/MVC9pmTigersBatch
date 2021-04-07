@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVC9pmTigersBatch.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,9 +10,10 @@ namespace MVC9pmTigersBatch.Controllers
     public class DefaultController : Controller
     {
         // GET: Default
-        public ActionResult Index()
+        public ActionResult Index(List<EmployeeModel>  emp)
         {
-            return View();
+             
+            return View(emp);
         }
     }
 }
