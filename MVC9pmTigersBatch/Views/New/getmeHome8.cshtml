@@ -1,0 +1,19 @@
+﻿@model MVC9pmTigersBatch.Models.EmployeeModel
+@{
+    ViewBag.Title = "getmeHome8";
+}
+
+<h2>getmeHome8</h2>
+
+@{
+    var s=   Html.Partial("_myPartialView", Model);
+    int a = 10;
+    if (a == 10)
+    {
+        @s
+    }
+        }<br />
+
+@{
+    Html.RenderPartial("_myPartialView", Model);
+     }

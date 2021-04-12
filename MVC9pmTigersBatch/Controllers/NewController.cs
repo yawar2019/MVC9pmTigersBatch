@@ -250,5 +250,48 @@ namespace MVC9pmTigersBatch.Controllers
         {
             return File("~/ActionResult.pdf", "application/pdf", "ActionResult.pdf");
         }
+        public ActionResult getmeHome8()
+        {
+
+            EmployeeModel obj = new Models.EmployeeModel();
+            obj.EmpId = 1;
+            obj.EmpName = "Akshay";
+            obj.EmpSalary = 21000;
+
+            return View(obj);
+        }
+
+        public PartialViewResult getmeHome9()
+        {
+
+            EmployeeModel obj = new Models.EmployeeModel();
+            obj.EmpId = 1;
+            obj.EmpName = "Akshay";
+            obj.EmpSalary = 21000;
+
+            return PartialView("_myPartialView", obj);
+        }
+
+        public ContentResult getmeMyContent(int? id)
+        {
+            if (id == 1)
+            {
+                return Content("Hello World");
+
+
+            }
+            else if(id==2)
+            {
+                return Content("<p style='color:red'>Hello World</p>");
+
+            }
+            else
+            {
+                return Content("<script>alert('welcome to my dem')</script>");
+
+            }
+
+
+        }
     }
 }

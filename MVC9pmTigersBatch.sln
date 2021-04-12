@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC9pmTigersBatch", "MVC9pmTigersBatch\MVC9pmTigersBatch.csproj", "{33F74ADF-A61C-41FF-9583-4A997A596D3A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoExample", "AdoExample\AdoExample.csproj", "{2A89C320-EC6D-4F7F-9E7E-79393095D8F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{33F74ADF-A61C-41FF-9583-4A997A596D3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33F74ADF-A61C-41FF-9583-4A997A596D3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33F74ADF-A61C-41FF-9583-4A997A596D3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A89C320-EC6D-4F7F-9E7E-79393095D8F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A89C320-EC6D-4F7F-9E7E-79393095D8F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A89C320-EC6D-4F7F-9E7E-79393095D8F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A89C320-EC6D-4F7F-9E7E-79393095D8F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
