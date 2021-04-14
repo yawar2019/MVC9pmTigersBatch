@@ -49,5 +49,51 @@ namespace AdoExample.Models
             return i;
 
         }
+        public EmployeeModel getEmployeeById(int? id)
+        {
+            EmployeeModel obj = new EmployeeModel();
+            SqlCommand cmd = new SqlCommand("spr_getEmployeeDetailsbyId", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@empid", id);
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                obj.EmpId = Convert.ToInt32(dr[0]);
+                obj.EmpName = Convert.ToString(dr[1]);
+                obj.EmpSalary = Convert.ToInt32(dr[2]); 
+            }
+
+            return obj;
+        }
+        public int UpdateEmployee(EmployeeModel emp)
+        {
+            SqlCommand cmd = new SqlCommand("spr_updateEmployeeDetails", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            cmd.Parameters.AddWithValue("@Empid", emp.EmpId);
+            cmd.Parameters.AddWithValue("@EmpName", emp.EmpName);
+            cmd.Parameters.AddWithValue("@EmpSalary", emp.EmpSalary);
+            int i = cmd.ExecuteNonQuery();
+            con.Close();
+            return i;
+
+        }
+
+        
+
+             public int DeleteEmployee(int? id)
+        {
+            SqlCommand cmd = new SqlCommand("spr_deleteEmployeeDetails", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            cmd.Parameters.AddWithValue("@Empid", id);
+           
+            int i = cmd.ExecuteNonQuery();
+            con.Close();
+            return i;
+
+        }
     }
 }
