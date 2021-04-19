@@ -13,6 +13,8 @@ namespace AdoExample.Models
         public string EmpName { get; set; }
         public int EmpSalary { get; set; }
     }
+
+
     public class EmployeeContext
     {
         SqlConnection con = new SqlConnection("Data Source=AZAM-PC\\SQLEXPRESS;Initial Catalog=Employee;Integrated Security=true");
