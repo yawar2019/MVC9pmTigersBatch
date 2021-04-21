@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseFirstApproach", "Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstApproach", "CodeFirstApproach\CodeFirstApproach.csproj", "{27708867-91B6-484A-8F02-3E9C5181FA9E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{1554F06D-4B2B-4F5A-B483-4303CF089340}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{27708867-91B6-484A-8F02-3E9C5181FA9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27708867-91B6-484A-8F02-3E9C5181FA9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27708867-91B6-484A-8F02-3E9C5181FA9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1554F06D-4B2B-4F5A-B483-4303CF089340}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1554F06D-4B2B-4F5A-B483-4303CF089340}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1554F06D-4B2B-4F5A-B483-4303CF089340}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1554F06D-4B2B-4F5A-B483-4303CF089340}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
