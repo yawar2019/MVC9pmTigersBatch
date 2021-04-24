@@ -293,5 +293,13 @@ namespace MVC9pmTigersBatch.Controllers
 
 
         }
+        public ActionResult HtmlHelperExample() {
+            EmployeeModel em = new EmployeeModel();
+            em.EmpName = "test value";
+            EmployeeEntities db = new Models.EmployeeEntities();
+            ViewBag.State = new SelectList(db.States, "Id", "StateName",2);
+
+            return View(em);
+        }
     }
 }

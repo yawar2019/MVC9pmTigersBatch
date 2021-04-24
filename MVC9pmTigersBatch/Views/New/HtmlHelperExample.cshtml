@@ -1,0 +1,55 @@
+﻿@model MVC9pmTigersBatch.Models.EmployeeModel
+@{
+    ViewBag.Title = "HtmlHelperExample";
+}
+
+<h2>HtmlHelperExample</h2>
+
+<script>
+    function Fun()
+    {
+
+        alert("world is great");
+    }
+</script>
+
+<input type="text" name="firstName" id="firstName" value=""   style="background-color:deeppink" class="form-control" /><br />
+@Html.TextBox("LastName", "test", new { style = "background-color:deeppink;color:green",@class="form-control",onclick="Fun()"})
+@Html.TextBoxFor(s=>s.EmpName, new { id = "txtEmpName" })<br />
+<span>4)</span>@Html.EditorFor(s=>s.status)
+
+@Html.LabelFor(s=>s.EmpName)<br />
+<br /><br /><br />
+@Html.EditorForModel(Model)
+
+@Html.Password("pwd", "123")<br />
+<span>Java</span>@Html.CheckBox("cbjava",true)<br />
+
+<span>Male</span>@Html.RadioButton("Gender", "Male")
+<span>Female</span>@Html.RadioButton("Gender", "FeMale")<br />
+
+ 
+
+@Html.DropDownList("Country",new List<SelectListItem>() {
+
+    new SelectListItem {Text="India",Value="1" },
+    new SelectListItem {Text="japan",Value="2",Selected=true },
+    new SelectListItem {Text="bangladesh",Value="3" },
+
+},"select Country")
+<br />
+
+@Html.DropDownList("State")<br />
+@Html.DropDownList("chanti",(IEnumerable<SelectListItem>)ViewBag.State,"Select State")<br />
+@MVC9pmTigersBatch.myControl.MyLabel("I Accept the Agreement")<br />
+@Html.createUrControl("text", "background-color:deeppink;color:green", "onclick", "Fun()")<br />
+@Html.createUrControl("text", "background-color:deeppink;color:blue", "onchange", "Fun()")<br />
+@Html.createUrControl("text", "background-color:gray;color:pink", "onmouseover", "Fun()")<br />
+@Html.createUrControl("radio")<br />
+@Html.createUrControl("file")<br />
+
+
+@helper funtastic(string e) { 
+    <label>@e</label>
+    }
+@funtastic("test")
