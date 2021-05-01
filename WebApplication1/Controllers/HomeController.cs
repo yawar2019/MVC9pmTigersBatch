@@ -26,5 +26,18 @@ namespace WebApplication1.Controllers
 
             return View();
         }
+        //[HandleError(View= "InputStringFormatErrorPage")]
+        public ActionResult ErrorExample(string id)
+        {
+            try
+            {
+                int i = Convert.ToInt32(id);
+            }
+            catch(Exception ex) {
+
+                throw ex;
+            }
+            return View();
+        }
     }
 }

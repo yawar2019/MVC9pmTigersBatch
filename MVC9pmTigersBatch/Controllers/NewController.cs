@@ -1,4 +1,5 @@
 ﻿using MVC9pmTigersBatch.Models;
+using MVC9pmTigersBatch.MyFilter;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -301,5 +302,13 @@ namespace MVC9pmTigersBatch.Controllers
 
             return View(em);
         }
+        [CustomFilter]
+        public ActionResult IPLTeamPlayer()
+        {
+            ViewBag.TeamName = "RCB";
+            return View();
+        }
+
+        
     }
 }
